@@ -5,10 +5,6 @@
     border-radius: 5px;
 }
 
-.user-table th {
-    text-align: left;
-}
-
-.user-table td {
-    width: 50%;
+table {
+    table-layout: fixed;
 }

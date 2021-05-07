@@ -15,7 +15,11 @@ const UserList = (props) => {
 				</thead>
 				<tbody>
 					{props.listOfUsers.map((user) => {
-						return <UserCard user={user} />;
+						return (
+							<tr>
+								<UserCard user={user} />
+							</tr>
+						);
 					})}
 				</tbody>
 			</table>

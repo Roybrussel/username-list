@@ -4,14 +4,14 @@ import './UserCard.css';
 
 const UserCard = (props) => {
 	return (
-		<tr>
+		<div className="user-card">
 			<td className="user-name">
-				<p>{props.user.name}</p>
+				<h5>{props.user.name}</h5>
 			</td>
 			<td className="user-age">
-				<p>{props.user.age} years old</p>
+				<h5>{props.user.age} years old</h5>
 			</td>
-		</tr>
+		</div>
 	);
 };
 

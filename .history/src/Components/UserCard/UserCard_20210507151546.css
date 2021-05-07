@@ -1,0 +1,8 @@
+.user-card {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-card div {
+    margin-right: 0.4rem;
+}

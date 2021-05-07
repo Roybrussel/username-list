@@ -4,11 +4,6 @@
     padding: 1rem;
     border-radius: 5px;
 }
-
-.user-table th {
-    text-align: left;
-}
-
-.user-table td {
-    width: 50%;
+tr {
+    margin: 50px;
 }

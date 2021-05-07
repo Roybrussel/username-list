@@ -6,6 +6,9 @@ import './UserList.css';
 const UserList = (props) => {
 	return (
 		<div className="list-container">
+			<div className="header">
+				<h3>List of users</h3>
+			</div>
 			<table className="user-table">
 				<thead>
 					<tr>
@@ -15,7 +18,11 @@ const UserList = (props) => {
 				</thead>
 				<tbody>
 					{props.listOfUsers.map((user) => {
-						return <UserCard user={user} />;
+						return (
+							<tr>
+								<UserCard user={user} />
+							</tr>
+						);
 					})}
 				</tbody>
 			</table>
