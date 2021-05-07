@@ -5,7 +5,7 @@ import './AddUserForm.css';
 
 const AddUserForm = (props) => {
 	const [
-		enteredName,
+		enteredUsername,
 		setEnteredUsername
 	] = useState('');
 	const [
@@ -25,7 +25,7 @@ const AddUserForm = (props) => {
 		event.preventDefault();
 
 		const userDetails = {
-			name: enteredName,
+			name: enteredUsername,
 			age: enteredAge
 		};
 
@@ -38,8 +38,8 @@ const AddUserForm = (props) => {
 		<form className="add-user-form" onSubmit={submitHandler}>
 			<div>
 				<div className="add-user-form__username">
-					<label>Name</label>
-					<input type="text" value={enteredName} onChange={usernameHandler} />
+					<label>Username</label>
+					<input type="text" value={enteredUsername} onChange={usernameHandler} />
 				</div>
 				<div className="add-user-form__age">
 					<label>Age</label>
