@@ -5,6 +5,10 @@ import './AddUserForm.css';
 
 const AddUserForm = (props) => {
 	const [
+		enteredValue,
+		setEnteredValue
+	] = useState('');
+	const [
 		isValid,
 		setIsValid
 	] = useState(true);
@@ -13,16 +17,12 @@ const AddUserForm = (props) => {
 		enteredName,
 		setEnteredUsername
 	] = useState('');
-
 	const [
 		enteredAge,
 		setEnteredAge
 	] = useState(0);
 
 	const usernameHandler = (event) => {
-		if (event.target.value.trim().length > 0) {
-			setIsValid(true);
-		}
 		setEnteredUsername(event.target.value);
 	};
 
@@ -32,15 +32,11 @@ const AddUserForm = (props) => {
 
 	const submitHandler = (event) => {
 		event.preventDefault();
+
 		const userDetails = {
 			name: enteredName,
 			age: enteredAge
 		};
-
-		if (enteredName.trim().length === 0) {
-			setIsValid(false);
-			return;
-		}
 
 		props.getNewUserDetails(userDetails);
 		setEnteredUsername('');
@@ -50,13 +46,13 @@ const AddUserForm = (props) => {
 	return (
 		<form className="add-user-form" onSubmit={submitHandler}>
 			<div>
-				<div className={`add-user-form__username ${!isValid ? 'invalid' : ''}`}>
-					<label>{!isValid ? 'Name is required' : 'Name'}</label>
-					<input type="text" className="" value={enteredName} onChange={usernameHandler} />
+				<div className="add-user-form__username">
+					<label>Name</label>
+					<input type="text" value={enteredName} onChange={usernameHandler} />
 				</div>
 				<div className="add-user-form__age">
 					<label>Age</label>
-					<input type="number" min={0} value={enteredAge} onChange={ageHandler} />
+					<input type="number" value={enteredAge} onChange={ageHandler} />
 				</div>
 				<div className="add-user-form__button">
 					<Button />

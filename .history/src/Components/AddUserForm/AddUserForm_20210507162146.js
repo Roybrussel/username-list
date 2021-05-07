@@ -56,7 +56,7 @@ const AddUserForm = (props) => {
 				</div>
 				<div className="add-user-form__age">
 					<label>Age</label>
-					<input type="number" min={0} value={enteredAge} onChange={ageHandler} />
+					<input type="number" value={enteredAge} onChange={ageHandler} />
 				</div>
 				<div className="add-user-form__button">
 					<Button />

@@ -19,10 +19,6 @@ input {
     border-radius: 5px;
 }
 
-.add-user-form__username.invalid label {
-    color: red;
-}
-
-.add-user-form__username.invalid input {
-    background-color: salmon;
+.test {
+    background-color: red;
 }

@@ -22,7 +22,3 @@ input {
 .add-user-form__username.invalid label {
     color: red;
 }
-
-.add-user-form__username.invalid input {
-    background-color: salmon;
-}
