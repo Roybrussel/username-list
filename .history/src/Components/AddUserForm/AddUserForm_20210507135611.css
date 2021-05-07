@@ -1,0 +1,19 @@
+.add-user-form {
+    background-color: #f8f5f1;
+    margin-top: 50px;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.add-user-form__username {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-user-form__username input {
+    width: 10%;
+}
+
+.add-user-form__age {
+
+}

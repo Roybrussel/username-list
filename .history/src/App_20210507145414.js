@@ -23,7 +23,7 @@ function App() {
 	return (
 		<div className="App">
 			<AddUserForm getNewUserDetails={getNewUserDetails} />
-			<UserList listOfUsers={listOfUsers} />
+			<UserList />
 		</div>
 	);
 }

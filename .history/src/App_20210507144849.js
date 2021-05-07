@@ -12,18 +12,14 @@ function App() {
 	] = useState([]);
 
 	const getNewUserDetails = (newUserDetails) => {
-		setListOfUsers((prevListOfUsers) => {
-			return [
-				newUserDetails,
-				...prevListOfUsers
-			];
-		});
+		setListOfUsers(newUserDetails);
+		console.log(listOfUsers);
 	};
 
 	return (
 		<div className="App">
 			<AddUserForm getNewUserDetails={getNewUserDetails} />
-			<UserList listOfUsers={listOfUsers} />
+			<UserList />
 		</div>
 	);
 }

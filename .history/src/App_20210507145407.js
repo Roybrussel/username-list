@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './App.css';
 
@@ -23,7 +23,7 @@ function App() {
 	return (
 		<div className="App">
 			<AddUserForm getNewUserDetails={getNewUserDetails} />
-			<UserList listOfUsers={listOfUsers} />
+			<UserList />
 		</div>
 	);
 }

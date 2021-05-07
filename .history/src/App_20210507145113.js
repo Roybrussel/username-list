@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './App.css';
 
@@ -12,18 +12,20 @@ function App() {
 	] = useState([]);
 
 	const getNewUserDetails = (newUserDetails) => {
-		setListOfUsers((prevListOfUsers) => {
-			return [
-				newUserDetails,
-				...prevListOfUsers
-			];
-		});
+		useEffect(
+			() => {
+				setListOfUsers(newUserDetails);
+			},
+			[
+				...listOfUsers
+			]
+		);
 	};
 
 	return (
 		<div className="App">
 			<AddUserForm getNewUserDetails={getNewUserDetails} />
-			<UserList listOfUsers={listOfUsers} />
+			<UserList />
 		</div>
 	);
 }

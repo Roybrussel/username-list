@@ -1,0 +1,24 @@
+.add-user-form {
+    background-color: #f8f5f1;
+    margin-top: 50px;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.add-user-form__username,
+.add-user-form__age,
+.add-user-form__button {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+input {
+    height: 2rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+}
+
+.test {
+    height: 5reem;
+}
